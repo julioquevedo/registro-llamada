@@ -1,0 +1,147 @@
+/*HEADER START*/
+header .nav-right li a:hover{ 
+  color: #ff9732 !important;
+}
+/*HEADER END*/
+
+
+/*NAV START*/
+nav.mega-menu .active > a{
+  background: #ff9732 !important;
+}
+nav.mega-menu a:hover{
+  background: #ff9732 !important;
+}
+nav.mega-menu .open > a {
+  background: #ff9732 !important;
+}
+/*NAV END*/
+
+
+/* CAROUSEL SLIDER END */
+#slider .carousel-indicators .active{
+  background: #ff9732 !important;
+}
+#slider .carousel-indicators li:hover{
+  background: #ff9732 !important;
+}
+/* CAROUSEL SLIDER START */
+
+
+/* CAROUSEL SLIDER PRODUCT START */
+#slider-top-product .carousel-indicators .active,
+#slider-best-seller-product .carousel-indicators .active,
+#slider-brand-product .carousel-indicators .active,
+#slider-new-arrival-product .carousel-indicators .active{
+  background: #ff9732;
+}
+/* CAROUSEL SLIDER PRODUCT END */
+
+
+/*PRODUCT ITEM START*/
+#product_grid .cart_button{
+  background-color: #ff9732;
+}
+/*PRODUCT ITEM END*/
+
+
+/*START PAGE TITLE*/
+.widget-line{
+  border-top: 3px solid #ff9732;
+}
+/*START PAGE TITLE*/
+
+
+/* CAROUSEL LATES COMMENT HOME PAGE START*/
+#lates-comment .quote-carousel .carousel-indicators .active {
+  background: #ff9732;
+}
+/* CAROUSEL LATES COMMENT HOME PAGE END*/
+
+
+/*SOSIAL START*/
+.social a.social-icon:hover{
+  background:#ff9732;
+}
+/*SOSIAL END*/
+
+/*CATEGORIES LEFT MENU START*/
+#categories_menus ul li span:hover, #categories_menus ul li a:hover{
+  color: #ff9732;
+}
+#categories_menus .badge{
+  background-color : #ff9732;
+}
+/*CATEGORIES LEFT MENU END*/
+
+
+/*SHOPPING CART START*/
+#cart table thead tr th,  #cart table td.title{
+  background: #ff9732;
+}
+/*SHOPPING CART END*/
+
+
+/*DETAIL PRODUCT START*/
+.detail_product .tab_product ul li.active {
+  border-bottom: 2px solid #ff9732;
+}
+.detail_product .tab_product .nav-tabs > li > a:hover {
+  background: none !important;
+  border-bottom: 2px solid #ff9732 !important;
+}
+/*DETAIL PRODUCT END*/
+
+
+/*SOSIAL START*/
+footer ul li a:hover{
+  color: #ff9732;
+}
+/*SOSIAL END*/
+
+
+/*TOOLBAR MENU PRODUCT START*/
+.toolbar .selected{
+  background: #ff9732;
+}
+/*TOOLBAR MENU PRODUCT END*/
+
+
+/*BUTTON BACK TO TOP START*/
+#back_to_top a:hover{
+  background: #ff9732;
+}
+/*BUTTON BACK TO TOP END*/
+
+
+/*FUNGTION COLOR START*/
+.btn-primary{
+  color: #fff;
+  background-color: #ff9732;
+  border-color: #ff9732;
+}
+.btn-primary:hover{
+  background-color: #ff9732;
+  border-color: #ff9732;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary{
+  background-color: #ff9732;
+}
+/*FUNGTION COLOR END*/
+
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-    input:focus {
+  border-color: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  outline: none;
+}
+
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+  /*CART START*/
+  #cart table tbody tr td:before, #cart table tbody tr td:before{
+    background-color: #ff9732;
+  }
+  /*CART END*/
+
+}

@@ -1,0 +1,66 @@
+.navbar .brand {
+    font-size: 1em;
+}
+input, textarea {
+	min-width: 10px !important;
+}
+.celdaImagen img { max-width: 300px; height: auto; }
+
+.required:after {
+    color: red;
+    content: ' (*)';
+    font-size: 12px;
+}
+
+.listaCli{
+	background: #f7f7f7;
+	border: solid 1px #f2f2f2;
+	padding: 5px 15px;
+	width: 100%;
+	min-height: 10px;
+	max-height: 200px;
+	overflow: auto;
+}
+
+.modalEncuesta{
+	width: 800px;
+	margin: -250px 0 0 -350px;
+}
+
+.textar{
+	width: 100%;
+	min-height: 60px;
+}
+
+.paso2 legend{margin-bottom: 0px;}
+
+.wr_tip_enun{width: 100%;overflow: hidden; min-height: 100px}
+.wr_tip_enun .tip_anun{float: left; width: 25%; margin: 10px 2%;  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; padding: 10px;text-decoration: none;}
+.wr_tip_enun .tip_anun:hover{ background: #d6ddf9;}
+.wr_tip_enun .tip_anun img{width: 80%; display: block;margin: 0 auto;}
+.wr_tip_enun .tip_anun span{text-align: center; display: block;}
+
+.opc_por_agregar{background: #f1f1f1;padding: 5px;}
+.opc_por_agregar input{margin: 0;}
+.wr_opc_insert input{margin: 0;}
+.wr_opc_insert {margin: 3px 0;}
+
+.wr_pregunta{ background: #e6e6e6;width: 100%; min-height: 10px;  margin: 10px auto;border: solid 1px #e6e6e6;}
+.wr_pregunta .header{background: #dedede;padding: 5px 20px;-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; overflow: hidden;}
+.wr_pregunta .header h4{display: inline-block; float: left;}
+.wr_pregunta .header .botones_a{float: right;}
+.wr_pregunta .header .delete_anun{}
+.wr_pregunta .header .update_anun{}
+.wr_pregunta .body{background: #fff;padding: 5px 20px;-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;}
+.txta_padd{width: 100%;}
+
+.wropccli{background: #f7f7f7 !important; width: 100%;min-height: 10px; overflow: auto;padding: 15px;  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;}
+.capaCli{float: left;width: 50% !important;}
