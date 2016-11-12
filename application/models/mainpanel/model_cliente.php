@@ -35,7 +35,7 @@ class Model_cliente extends CI_Model {
         $this->db->where('delete', '0');                
         $this->db->order_by('nombre','desc');
         $query =  $this->db->get('usuarios');
-        return $query->result_array();
+        return $query->result_array(); 
     }
     
     public function get($id) {

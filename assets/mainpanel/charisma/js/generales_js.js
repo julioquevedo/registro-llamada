@@ -203,6 +203,29 @@ function valida_banner() {
         return false;
     }    
 }
+
+
+function valida_cartera() {
+    nombre=$("#nombre").val();
+    if(nombre===""){
+        alert("Ingrese el nombre de la Cartera");
+        $("#nombre").focus();        
+        return false;
+    } 
+    
+    usuarios_id=$("#usuarios_id").val();
+    if(usuarios_id==0){
+        alert("Seleccione al Teleoperador");
+        return false;
+    }  
+
+    if(!$("input.checkCli:checked").val()) {
+        alert('No hay ninguna opción seleccionada');
+        return false;
+    }      
+}
+
+
 function valida_categoria() {
     nombre_categoria=$("#nombre_categoria").val();
     nombre_categoria=$.trim(nombre_categoria);
