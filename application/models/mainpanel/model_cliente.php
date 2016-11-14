@@ -16,17 +16,6 @@ class Model_cliente extends CI_Model {
         return $query->result_array();
     }
     
-    public function getListaCartera() {
-
-        $this->db->select('a.*,b.nombre,b.usuario');                        
-        $this->db->join('usuarios b','b.id=a.usuarios_id','left');                
-        //$this->db->join('clientes c','c.id_cliente=a.clientes_id_cliente','left');                        
-        $this->db->from('tcab_cartera a');
-        $this->db->order_by('a.fg','desc');    
-        $query =  $this->db->get('');
-        return $query->result();
-            
-    }    
 
     public function getListaOperadores() {
         $this->db->select('*');

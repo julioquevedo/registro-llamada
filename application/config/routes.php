@@ -94,12 +94,12 @@ $route['mainpanel/clientes/edit/([0-9]+)'] = "mainpanel/controller_cliente/edit/
 $route['mainpanel/clientes/actualizar'] = "mainpanel/controller_cliente/actualizar";
 $route['mainpanel/clientes/grabar'] = "mainpanel/controller_cliente/grabar";
 
-$route['mainpanel/clientes/cartera'] = "mainpanel/controller_cliente/listado_cartera";
-$route['mainpanel/clientes/cartera/nuevo'] = "mainpanel/controller_cliente/nueva_cartera";
-$route['mainpanel/clientes/cartera/delete/([0-9]+)'] = "mainpanel/controller_cliente/delete_cartera/$1";
-$route['mainpanel/clientes/cartera/edit/([0-9]+)'] = "mainpanel/controller_cliente/edit_cartera/$1";
-$route['mainpanel/clientes/cartera/actualizar'] = "mainpanel/controller_cliente/actualizar_cartera";
-$route['mainpanel/clientes/cartera/grabar'] = "mainpanel/controller_cliente/grabar_cartera";
+$route['mainpanel/clientes/cartera'] = "mainpanel/controller_cartera/listado_cartera";
+$route['mainpanel/clientes/cartera/nuevo'] = "mainpanel/controller_cartera/nueva_cartera";
+$route['mainpanel/clientes/cartera/delete/([0-9]+)'] = "mainpanel/controller_cartera/delete_cartera/$1";
+$route['mainpanel/clientes/cartera/edit/([0-9]+)'] = "mainpanel/controller_cartera/edit_cartera/$1";
+$route['mainpanel/clientes/cartera/actualizar'] = "mainpanel/controller_cartera/actualizar_cartera";
+$route['mainpanel/clientes/cartera/grabar'] = "mainpanel/controller_cartera/grabar_cartera";
 
 $route['mainpanel/listado/index'] = "mainpanel/controller_subcategoria/listado";
 $route['mainpanel/subcategoria/listado/([0-9]+)'] = "mainpanel/controller_subcategoria/listado/$1";

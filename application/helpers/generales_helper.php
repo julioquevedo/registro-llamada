@@ -60,6 +60,15 @@ if ( ! function_exists('getImpresion'))
 	}
 }
 
+if ( ! function_exists('pre'))
+{
+	function pre($data) {
+		echo '<pre>';
+		var_dump($data);
+		echo '</pre>';		
+	}
+}
+
 if ( ! function_exists('getCol'))
 {
 	function getCol($id_color) {

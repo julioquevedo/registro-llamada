@@ -35,12 +35,10 @@
                     <div class="control-group">
                         <label class="control-label" for="typeahead">Nombre de la Cartera *</label>
                         <div class="controls">
-                            <input type="text" class="span6 typeahead" id="nombre" name="nombre" value=""  maxlength="100">
+                            <input type="text" class="span6 typeahead" id="nombre" name="nombre" value="" required maxlength="100">
                         </div>
                     </div>
-<?php
-//var_dump($listado_operadores);
-?>
+
                     <div class="control-group">
                         <label class="control-label" for="typeahead">Selecciona el teleoperador *</label>
                         <div class="controls">

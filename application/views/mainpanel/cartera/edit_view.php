@@ -11,10 +11,9 @@
             </div>
         </div>
         <div class="box-content">
-            <form class="form-horizontal" action="mainpanel/clientes/actualizar" method="post" 
-                  enctype="multipart/form-data" onsubmit="return valida_clientes()">
+            <form class="form-horizontal" action="mainpanel/clientes/cartera/actualizar" method="post" enctype="multipart/form-data" onsubmit="return valida_cartera()">
                 <fieldset>
-                    <legend>Modifique los datos deseados</legend>
+                    <legend>Ingrese los datos</legend>
                     <?php
                     if($this->session->userdata('success'))
                     {
@@ -32,151 +31,80 @@
                         echo '</div>';
                         $this->session->unset_userdata('error');
                     } 
+                    //pre($cabcartera);
+                    ?>                    
+                    <div class="control-group">
+                        <label class="control-label" for="typeahead">Nombre de la Cartera *</label>
+                        <div class="controls">
+                            <input type="text" class="span6 typeahead" id="nombre" name="nombre" value="<?php echo $cabcartera['nombre'];?>" required maxlength="100">
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="typeahead">Selecciona el teleoperador *</label>
+                        <div class="controls">
+                            <select name="usuarios_id" id="usuarios_id" required>
+                            <option value="0">Seleccione ...</option>
+                            <?php
+                            foreach ($listado_operadores as $key => $value) {
+                                if($cabcartera['usuarios_id']==$value['id']){
+                                    echo '<option value="'.$value['id'].'" selected>'.$value['nombre'].'</option>';
+                                }else{
+                                    echo '<option value="'.$value['id'].'">'.$value['nombre'].'</option>';
+                                }
+                            }
+                            ?>
+                            </select>  
+                        </div>
+                    </div>                    
+                    <?php
+                    $cli=[];
+                    foreach ($detcartera as $value) {
+                        $cli[]=$value['id_cliente'];
+                    }
+                    //pre($cli);
                     ?>
+                    <div class="control-group">
+                        <label class="control-label" for="typeahead">Clientes: </label>
+                        <div class="controls ">
+                            <div class="wropccli">
+                            <?php
+                            foreach ($listado_clientes as $key => $value) {
+                                if(in_array($value['id_cliente'], $cli)) {$check="checked";}else{$check="";}
+                                echo '<div class="capaCli">';
+                                echo '<input type="checkbox" value="'.$value['id_cliente'].'" name="clientes[]" class="checkCli" '.$check.'>'.$value['nombre_comercial'];
+                                echo '</div>';
 
-                    <div class="control-group">
-                        <label class="control-label" for="typeahead">RUC *</label>
-                        <div class="controls">
-                            <input type="text" class="span6 typeahead" id="ruc" name="ruc" value="<?php echo $cliente->ruc; ?>" required maxlength="8">
+                            }
+                            ?>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label class="control-label" for="typeahead">Raz&oacute;n Social *</label>
-                        <div class="controls">
-                            <input type="text" class="span6 typeahead" id="razon_social" name="razon_social" value="<?php echo $cliente->razon_social; ?>" required>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label" for="typeahead">CIIU *</label>
-                        <div class="controls">
-                            <input type="text" class="span2 typeahead" id="ciiu" name="ciiu" value="<?php echo $cliente->ciiu; ?>" required>
-                        </div>
-                    </div>
-                    
-                    <div class="control-group">
-                        <label class="control-label" for="typeahead">Fecha Fundaci&oacute;n *</label>
-                        <div class="controls">
-                            <input type="text" class="span2 typeahead" id="f_fundacion" name="f_fundacion" value="<?php echo $cliente->f_fundacion; ?>" required>
-                        </div>
-                    </div>
-                    
-                    <div class="control-group">
-                        <label class="control-label" for="typeahead">N. Trabajadores *</label>
-                        <div class="controls">
-                            <input type="text" class="span2 typeahead" id="n_trabajadores" name="n_trabajadores" value="<?php echo $cliente->n_trabajadores; ?>" required>
-                        </div>
-                    </div>
-                    
-                    <div class="control-group">
-                        <label class="control-label" for="typeahead">Nombre Comercial*</label>
-                        <div class="controls">
-                            <input type="text" class="span2 typeahead" id="nombre_comercial" name="nombre_comercial" value="<?php echo $cliente->nombre_comercial; ?>" required>
-                        </div>
-                    </div>
-                    
-                    <div class="control-group">
-                        <label class="control-label" for="typeahead">Direcci&oacute;n *</label>
-                        <div class="controls">
-                            <input type="text" class="span2 typeahead" id="direccion" name="direccion" value="<?php echo $cliente->direccion; ?>" required>
-                        </div>
-                    </div>
-                    
-                    <div class="control-group">
-                        <label class="control-label" for="typeahead">Distrito *</label>
-                        <div class="controls">
-                            <input type="text" class="span2 typeahead" id="distrito" name="distrito" value="<?php echo $cliente->distrito; ?>" required>
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label class="control-label" for="typeahead">Provincia *</label>
-                        <div class="controls">
-                            <input type="text" class="span2 typeahead" id="provincia" name="provincia" value="<?php echo $cliente->provincia; ?>" required>
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label class="control-label" for="typeahead">Departamento *</label>
-                        <div class="controls">
-                            <input type="text" class="span2 typeahead" id="departamento" name="departamento" value="<?php echo $cliente->departamento; ?>" required>
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label class="control-label" for="typeahead">Teléfono 1</label>
-                        <div class="controls">
-                            <input type="text" class="span3 typeahead" id="telefono01" name="telefono01" value="<?php echo $cliente->telefono01; ?>" required>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label" for="typeahead">Teléfono 2</label>
-                        <div class="controls">
-                            <input type="text" class="span3 typeahead" id="telefono02" name="telefono02" value="<?php echo $cliente->telefono02; ?>" >
-                        </div>
-                    </div> 
-                    <div class="control-group">
-                        <label class="control-label" for="typeahead">Teléfono 3</label>
-                        <div class="controls">
-                            <input type="text" class="span3 typeahead" id="telefono03" name="telefono03" value="<?php echo $cliente->telefono03; ?>" >
-                        </div>
-                    </div>   
-                    <div class="control-group">
-                        <label class="control-label" for="typeahead">Celular 1</label>
-                        <div class="controls">
-                            <input type="text" class="span3 typeahead" id="celular01" name="celular01" value="<?php echo $cliente->celular01; ?>" >
-                        </div>
-                    </div>                      
-                    <div class="control-group">
-                        <label class="control-label" for="typeahead">Fax 1</label>
-                        <div class="controls">
-                            <input type="text" class="span3 typeahead" id="fax01" name="fax01" value="<?php echo $cliente->fax01; ?>" >
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label" for="typeahead">Fax 2</label>
-                        <div class="controls">
-                            <input type="text" class="span3 typeahead" id="fax02" name="fax02" value="<?php echo $cliente->fax02; ?>" >
-                        </div>
-                    </div> 
-                    <div class="control-group">
-                        <label class="control-label" for="typeahead">Email *</label>
-                        <div class="controls">
-                            <input type="email" class="span3 typeahead" id="email" name="email" value="<?php echo $cliente->email; ?>" required>
-                        </div>
-                    </div> 
-                    <div class="control-group">
-                        <label class="control-label" for="typeahead">Direcci&oacute;n Web</label>
-                        <div class="controls">
-                            <input type="email" class="span3 typeahead" id="direccion_web" name="direccion_web" value="<?php echo $cliente->direccion_web; ?>" >
-                        </div>
-                    </div>                                        
+                    </div>                                                              
                     <div class="control-group">
                         <label class="control-label">Estado</label>
                         <div class="controls">
                             <label class="radio">
-                                <input type="radio" name="estado" id="estado1" value="A" <?php if($cliente->estado=="A") echo 'checked="checked"'; ?>>
+                                <input type="radio" name="estado" id="estado1" value="A" checked="checked">
                                 Activo
                             </label>
                             <div style="clear:both"></div>
                             <label class="radio">
-                                <input type="radio" name="estado" id="estado2" value="I" <?php if($cliente->estado=="I") echo 'checked="checked"'; ?>>
+                                <input type="radio" name="estado" id="estado2" value="I">
                                 Inactivo
                             </label>
                         </div>
                     </div>                    
-                     
+                    
 
-
+                    
                     <div class="form-actions">
-                        <input type="hidden" name="id_cliente" id="id_cliente" value="<?php echo $cliente->id_cliente; ?>">
-                        
                         <input type="submit" class="btn btn-primary" value="GRABAR">
                         &nbsp;&nbsp;
-                        <a class="btn btn-danger" href="mainpanel/clientes/listado">VOLVER AL LISTADO</a>
+                        <a class="btn btn-danger" href="mainpanel/clientes/cartera">VOLVER AL LISTADO</a>
+                        <input type="hidden" value="<?php echo $cabcartera['idtcab_cartera'];?>" name="idtcab_cartera">
                     </div>
                 </fieldset>
-            </form>   
+            </form>  
 
         </div>
     </div><!--/span-->

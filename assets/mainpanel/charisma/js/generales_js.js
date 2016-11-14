@@ -8,6 +8,17 @@ function deleteCliente(id) {
     $('#botonModal').show();
     $('#myModal').modal('show');   
 }
+
+function deleteCartera(id) {
+    $('#capatituloModal').html('Esta a punto de eliminar la cartera del Teleoperador');
+    $('#cuerpoModal').html('<p>Esta seguro que quiere hacerlo?</p>');
+    str = '<a href="#" class="btn" data-dismiss="modal">CANCELAR</a>';
+    str += '<a href="mainpanel/clientes/cartera/delete/'+id+'" class="btn btn-primary">BORRAR</a>';
+    $('#botonModal').html(str);
+    $('#botonModal').show();
+    $('#myModal').modal('show');   
+}
+
 function anade_encuesta() {
     reset_modal();
     colocaActive('myModalAddPregunta');
@@ -87,15 +98,7 @@ function delRegistro(id) {
     $('#myModal').modal('show');   
 }
 
-function delCliente(id) {
-    $('#tituloModal').html('Esta a punto de eliminar al cliente seleccionado');
-    $('#cuerpoModal').html('<p>Esta seguro que quiere hacerlo?</p>');
-    str = '<a href="#" class="btn" data-dismiss="modal">CANCELAR</a>';
-    str += '<a href="mainpanel/clientes/delete/'+id+'" class="btn btn-primary">BORRAR</a>';
-    $('#botoneraModal').html(str);
-    $('#botoneraModal').show();
-    $('#myModal').modal('show');   
-}
+
 
 function delete_anun(id,encu) {
     $('#capatituloModal').html('Esta a punto de borrar el enunciado!');
