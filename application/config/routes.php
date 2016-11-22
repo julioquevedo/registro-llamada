@@ -101,6 +101,14 @@ $route['mainpanel/clientes/cartera/edit/([0-9]+)'] = "mainpanel/controller_carte
 $route['mainpanel/clientes/cartera/actualizar'] = "mainpanel/controller_cartera/actualizar_cartera";
 $route['mainpanel/clientes/cartera/grabar'] = "mainpanel/controller_cartera/grabar_cartera";
 
+$route['mainpanel/asignaciones'] = "mainpanel/controller_asignaciones/index";
+$route['mainpanel/asignaciones/lista'] = "mainpanel/controller_asignaciones/index";
+$route['mainpanel/asignaciones/nuevo'] = "mainpanel/controller_asignaciones/nueva";
+$route['mainpanel/asignaciones/delete/([0-9]+)'] = "mainpanel/controller_asignaciones/delete/$1";
+$route['mainpanel/asignaciones/edit/([0-9]+)'] = "mainpanel/controller_asignaciones/edit/$1";
+$route['mainpanel/asignaciones/actualizar'] = "mainpanel/controller_asignaciones/actualizar";
+$route['mainpanel/asignaciones/grabar'] = "mainpanel/controller_asignaciones/grabar";
+
 $route['mainpanel/listado/index'] = "mainpanel/controller_subcategoria/listado";
 $route['mainpanel/subcategoria/listado/([0-9]+)'] = "mainpanel/controller_subcategoria/listado/$1";
 $route['mainpanel/subcategoria/nuevo'] = "mainpanel/controller_subcategoria/nuevo";

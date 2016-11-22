@@ -5,9 +5,9 @@
   
     <div class="box span12">
         <div class="box-header well" data-original-title>
-            <h2><i class="icon-user"></i> Cartera de Clientes</h2>
-            &nbsp;&nbsp;&nbsp;
-            <a class="btn btn-primary" href="mainpanel/clientes/cartera/nuevo">CREAR CARTERA</a>            
+            <h2><i class="icon-user"></i> Listado de Asignaciones</h2>
+<!--             &nbsp;&nbsp;&nbsp;
+            <a class="btn btn-primary" href="mainpanel/asignaciones/nuevo">CREAR ASIGNACION</a>      -->       
         </div>
         <div class="box-content">
             <?php
@@ -34,10 +34,10 @@
                 <thead>
                     <tr>
                         <th>Nro</th>
-                        <th>Teleoperador</th>
-                        <th>Cartera</th>                        
-                        <th>Num. Clientes</th>
-                        <th>Creado</th>                        
+                        <th>Asignado a ...</th>
+                        <th>Inicio/Fin</th>                        
+                        <th>Estado</th>
+                        <th>Avance</th>                        
                         <th>Acción</th>
                     </tr>
                 </thead>   

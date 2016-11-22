@@ -230,6 +230,75 @@
                     //minDate:'-1970/01/02', // yesterday is minimum date
                     //maxDate:'+1970/01/02' // and tommorow is maximum date calendar
             });
+
+            $('#f_inicio_asignacion').datetimepicker({
+                    lang: 'de',
+                    i18n: {
+                        de: {
+                            months: [
+                                'Enero', 'Febrero', 'Marzo', 'Abril',
+                                'Mayo', 'Junio', 'Julio', 'Agosto',
+                                'Septiembre', 'Octubre', 'Noviembre', 'Diciembre',
+                            ],
+                            dayOfWeek: [
+                                "Dom", "Lun", "Mar", "Mie", "Jue",
+                                "Vie", "Sab",
+                            ]
+                        }
+                    },
+                    timepicker:true,
+                    format:'Y-m-d H:m',
+                    formatDate:'Y-m-d H:m'
+
+                    //minDate:'-1970/01/02', // yesterday is minimum date
+                    //maxDate:'+1970/01/02' // and tommorow is maximum date calendar
+            });
+
+            $('#f_fin').datetimepicker({
+                    lang: 'de',
+                    i18n: {
+                        de: {
+                            months: [
+                                'Enero', 'Febrero', 'Marzo', 'Abril',
+                                'Mayo', 'Junio', 'Julio', 'Agosto',
+                                'Septiembre', 'Octubre', 'Noviembre', 'Diciembre',
+                            ],
+                            dayOfWeek: [
+                                "Dom", "Lun", "Mar", "Mie", "Jue",
+                                "Vie", "Sab",
+                            ]
+                        }
+                    },
+                    timepicker:false,
+                    format:'d-m-Y',
+                    formatDate:'d-m-Y'
+
+                    //minDate:'-1970/01/02', // yesterday is minimum date
+                    //maxDate:'+1970/01/02' // and tommorow is maximum date calendar
+            });  
+
+            $('#f_fin_asignacion').datetimepicker({
+                    lang: 'de',
+                    i18n: {
+                        de: {
+                            months: [
+                                'Enero', 'Febrero', 'Marzo', 'Abril',
+                                'Mayo', 'Junio', 'Julio', 'Agosto',
+                                'Septiembre', 'Octubre', 'Noviembre', 'Diciembre',
+                            ],
+                            dayOfWeek: [
+                                "Dom", "Lun", "Mar", "Mie", "Jue",
+                                "Vie", "Sab",
+                            ]
+                        }
+                    },
+                    timepicker:true,
+                    format:'Y-m-d H:m',
+                    formatDate:'Y-m-d H:m'
+
+                    //minDate:'-1970/01/02', // yesterday is minimum date
+                    //maxDate:'+1970/01/02' // and tommorow is maximum date calendar
+            });
         </script>
 
         <script>
